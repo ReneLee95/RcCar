@@ -12,3 +12,4 @@ please download wiringPi
 check wiringPi install version
 => gpio -v
 => gpio realall (gpio pin header check
+https://github.com/ReneLee95/RcCar/issues/1#issue-439422568
