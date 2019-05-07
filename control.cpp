@@ -10,24 +10,9 @@
 #define S1 2
 #define S2 3
 
-int main()
+
+void control()
 {
-	char data;
-	if(wiringPiSetup () == -1)
-	return 1;
-
-	pinMode(M1_L, OUTPUT);
-	pinMode(M1_R, OUTPUT);
-	pinMode(M2_L, OUTPUT);
-	pinMode(M2_R, OUTPUT);
-	pinMode(EA,OUTPUT);
-	pinMode(EB,OUTPUT);
-	softPwmCreate(EA,0,200);
-	softPwmCreate(EB,0,200);
-	softPwmCreate(S1,0,3000);
-	softPwmCreate(S2,0,3000);
-
-
 	while(1)
 	{
 		scanf("%s", &data);
@@ -126,11 +111,26 @@ int main()
 		break;
 		}
 	}
-	return 0;
 }
 
+int main()
+{
+	char data;
+	if(wiringPiSetup () == -1)
+	return 1;
 
-
-
-
-
+	pinMode(M1_L, OUTPUT);
+	pinMode(M1_R, OUTPUT);
+	pinMode(M2_L, OUTPUT);
+	pinMode(M2_R, OUTPUT);
+	pinMode(EA,OUTPUT);
+	pinMode(EB,OUTPUT);
+	softPwmCreate(EA,0,200);
+	softPwmCreate(EB,0,200);
+	softPwmCreate(S1,0,3000);
+	softPwmCreate(S2,0,3000);
+	
+	control();
+	
+	return 0;
+}
