@@ -53,7 +53,7 @@ void control()
 		digitalWrite(M1_R,0);
 		digitalWrite(M1_L,1);
 		digitalWrite(M2_R,1);
-		digitalWrite(M2_L,10;
+		digitalWrite(M2_L,0);
 		softPwmWrite(EA,200);
 		softPwmWrite(EB,200);
 		printf("Reverse");
