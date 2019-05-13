@@ -50,10 +50,10 @@ void control()
 		break;
 
 		case 'x':
-		digitalWrite(M1_R,1);
-		digitalWrite(M1_L,0);
-		digitalWrite(M2_R,0);
-		digitalWrite(M2_L,1);
+		digitalWrite(M1_R,0);
+		digitalWrite(M1_L,1);
+		digitalWrite(M2_R,1);
+		digitalWrite(M2_L,0);
 		softPwmWrite(EA,200);
 		softPwmWrite(EB,200);
 		printf("Reverse");
