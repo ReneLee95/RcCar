@@ -21,6 +21,9 @@ int setup()
 	{
 		return 1;
 	}
+	/* Set pinMode gpio and PWM */
+    pinMode(ObstaclePin,INPUT); //you don't setting OUTPUT if you set the OUTPUT , you can see a reverse result
+    pinMode(ObstaclePin2,INPUT);
 	pinMode(M1_L, OUTPUT);
 	pinMode(M1_R, OUTPUT);
 	pinMode(M2_L, OUTPUT);
